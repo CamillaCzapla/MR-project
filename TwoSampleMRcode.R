@@ -23,12 +23,10 @@ sliced = slice_head(attempt, n=3000)
 filtered_Family_Oxalobacteraceae_exp_dat = filter(attempt, p_value < 1e-05)
 write.table(filtered_Family_Oxalobacteraceae_exp_dat, file = "filtered_Family_Oxalobacteraceae_exp_dat.txt", quote = FALSE, row.names = FALSE)
 
-#how i made the large connected table in my BIOL 396 paper
+#how i made the large connected table
 fwrite(res, file = "Genus_Bifidobacterium_res.txt")
 fwrite(res, file = "attempt_class_Actinobacteria_res_copy.txt", append = TRUE)
 
-financials[(financials$Symbol == "ACN" | financials$Symbol == "APTV") & (financials$Sector == "Consumer Discretionary" | financials$Sector == "Industrials"),]
-test = microbiome_exp_dat[(microbiome_exp_dat$SNP == "rs3768998" | microbiome_exp_dat$SNP == "rs55842567" | microbiome_exp_dat$SNP == "rs6660520")]
 ##THIS WORKED!!!!!!!!!!
 test_data = microbiome_exp_dat %>% filter(SNP == "rs3768998" | SNP == "rs55842567" | SNP == "rs6660520")
 
